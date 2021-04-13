@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/camera_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/touch_coordinates"
+        android:layout_marginStart="23dp"
+        android:src="@drawable/shape" />
+
+    <TextView
+        android:id="@+id/touch_coordinates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/touch_color"
+        android:layout_marginTop="22dp"
+        android:text="X: 0, Y: 0"
+        android:textColor="#7FFF00" />
+
+    <TextView
+        android:id="@+id/touch_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:text="Color: "
+        android:textColor="#7FFF00" />
+
+    <Button
+        android:id="@+id/RgbToHsvButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick"
+        android:text="HSV"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <Button
+        android:id="@+id/HsvToRgbButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/RgbToHsvButton"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick"
+        android:text="RGB"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="463dp" />
+
+    <ImageButton
+        android:id="@+id/colorTableButton"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/photoAlbum"
+        android:layout_alignTop="@+id/RgbToHsvButton"
+        android:onClick="onClick"
+        android:src="@drawable/button_dictionary" />
+
+    <ImageButton
+        android:id="@+id/howtouse"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="58dp"
+        android:layout_marginEnd="23dp"
+        android:background="#00000000"
+        android:onClick="onClick"
+        android:src="@drawable/button_howtouse" />
+
+    <ImageButton
+        android:id="@+id/takePicture"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="27dp"
+        android:onClick="onClick"
+        android:src="@drawable/button_take_picture"/>
+
+    <ImageButton
+        android:id="@+id/photoAlbum"
+        android:layout_width="44dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/takePicture"
+        android:layout_alignStart="@+id/takePicture"
+        android:layout_marginTop="98dp"
+        android:onClick="onClick"
+        android:src="@drawable/button_load_image"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+
+
+</RelativeLayout>

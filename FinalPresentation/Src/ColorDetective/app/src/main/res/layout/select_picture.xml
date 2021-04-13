@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/touch_coordinates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/colorRgb"
+        android:layout_alignStart="@+id/colorRgb"
+        android:layout_marginBottom="-28dp"
+        android:text="X: 0, Y: 0"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/colorRgb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="32dp"
+        android:text="(R, G, B): "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/colorHsv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/touch_coordinates"
+        android:layout_marginTop="59dp"
+        android:text="(H, S, V): "
+        android:textColor="#000000" />
+</RelativeLayout>
